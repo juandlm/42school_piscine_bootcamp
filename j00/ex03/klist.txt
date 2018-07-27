@@ -1,0 +1,8 @@
+Credentials cache: API:37884
+        Principal: jde-la-m@LE-101.FR
+
+  Issued                Expires               Principal
+Jul  2 10:40:19 2018  Jul  2 20:40:19 2018  krbtgt/LE-101.FR@LE-101.FR
+Jul  2 10:40:21 2018  Jul  2 20:40:19 2018  ldap/ldap-master.le-101.fr@LE-101.FR
+Jul  2 10:40:21 2018  Jul  2 20:40:19 2018  HTTP/storage-student.le-101.fr@LE-101.FR
+Jul  2 11:25:05 2018  Jul  2 20:40:19 2018  host/vogsphere.le-101.fr@LE-101.FR
