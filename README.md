@@ -5,4 +5,5 @@ Piscine C de 42 réalisée à l'école 101 à Lyon en juillet 2018.
 - Classé 8ème sur 200 piscineux
 
 Notes obtenues:
+
 ![Grades](https://i.imgur.com/c1Icnbi.png)
