@@ -6,4 +6,4 @@ Piscine C de 42 réalisée à l'école 101 à Lyon en juillet 2018.
 
 Notes obtenues:
 
-![Grades](https://i.imgur.com/c1Icnbi.png)
+![Grades](https://i.imgur.com/YHRKnU3.png)
