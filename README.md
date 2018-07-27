@@ -1,4 +1,4 @@
-# piscine-42-101-07-2018
+# Piscine C 42 - Le 101 - Juillet 2018
 Piscine C de 42 réalisée à l'école 101 à Lyon en juillet 2018.
 
 - 240 heures de logtime
