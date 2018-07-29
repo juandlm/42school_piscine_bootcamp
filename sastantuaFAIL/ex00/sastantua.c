@@ -11,7 +11,23 @@
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
+#include <stdlib.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int	ft_strlen(char *str)
+{
+	int len;
+
+	len = 0;
+	while (*str)
+		len++;
+	return (len);
+}
 
 void	sastantua(int size)
 {
@@ -39,4 +55,12 @@ void	sastantua(int size)
 		ft_putchar('\n');
 		++count;
 	}
+}
+
+
+int main(int ac, char **av)
+{
+	if (ac)
+		sastantua(atoi(av[1]));
+	return (0);
 }
