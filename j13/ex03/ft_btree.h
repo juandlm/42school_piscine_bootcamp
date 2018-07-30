@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_btree.h                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <jde-la-m@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/19 21:34:58 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/19 21:38:36 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 15:29:35 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,12 +16,11 @@
 
 # include <stdlib.h>
 
-typedef struct			s_btree
+typedef struct		s_btree
 {
-	struct s_btree		*parent;
-	struct s_btree		*right;
-	struct s_btree		*left;
-	void				*data;
-}						t_btree;
+	struct s_btree	*left;
+	struct s_btree	*right;
+	void			*item;
+}					t_btree;
 
 #endif
