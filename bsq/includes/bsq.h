@@ -6,7 +6,7 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/25 19:33:07 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/30 02:32:33 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 13:28:54 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -48,8 +48,7 @@ typedef struct		s_map
 char				*ft_strncat(char *dst, char *src, unsigned int n);
 int					ft_m_atoi(char *str);
 int					ft_min(int a, int b, int c);
-int					ft_max(int *tab, unsigned int len);
-int					ft_file_size(char *filename);
+int					bsq_check_filesize(char *filename);
 int					bsq_check_map(t_grid grid, t_map map);
 int					**bsq_ctoi(t_grid grid, t_map map);
 void				bsq_fill_tab(int **tab, t_coord pos, t_grid grid);

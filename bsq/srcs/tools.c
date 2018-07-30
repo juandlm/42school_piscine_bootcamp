@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   tools.c                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <jde-la-m@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/23 15:53:43 by arazanaj     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/25 23:23:01 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 13:28:51 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -59,37 +59,4 @@ int		ft_min(int a, int b, int c)
 		return (a < c) ? a : c;
 	else
 		return (b < c) ? b : c;
-}
-
-int		ft_max(int *tab, unsigned int len)
-{
-	unsigned int	i;
-	int				max;
-
-	i = 0;
-	max = tab[0];
-	while (i < len)
-	{
-		if (max < tab[i])
-			max = tab[i];
-		++i;
-	}
-	if (i == len)
-		return (max);
-	return (0);
-}
-
-int		ft_file_size(char *filename)
-{
-	char	rbuf[11];
-	int		fd;
-
-	fd = open(filename, O_RDWR);
-	if (read(fd, &rbuf, 10) < 7)
-	{
-		close(fd);
-		return (-1);
-	}
-	close(fd);
-	return (0);
 }

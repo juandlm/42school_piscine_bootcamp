@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   main.c                                           .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <jde-la-m@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/23 15:53:43 by arazanaj     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/25 23:25:40 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 13:28:52 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@ int		bsq(char *argv)
 	int fd;
 
 	fd = 0;
-	if (ft_file_size(argv) < 0)
+	if (bsq_check_filesize(argv) < 0)
 		bsq_map_error();
 	else
 	{

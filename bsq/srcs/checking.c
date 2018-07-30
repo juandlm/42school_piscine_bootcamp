@@ -6,7 +6,7 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/23 15:53:43 by arazanaj     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/30 02:31:40 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 13:28:50 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -34,6 +34,21 @@ int		bsq_check_map(t_grid grid, t_map map)
 	if (row != height || row == 0 || column == 0
 			|| grid.size != (grid.col * grid.row))
 		return (-1);
+	return (0);
+}
+
+int		bsq_check_filesize(char *filename)
+{
+	char	rbuf[11];
+	int		fd;
+
+	fd = open(filename, O_RDWR);
+	if (read(fd, &rbuf, 10) < 7)
+	{
+		close(fd);
+		return (-1);
+	}
+	close(fd);
 	return (0);
 }
 
