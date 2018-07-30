@@ -6,14 +6,14 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/08 18:39:25 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/08 18:39:37 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 13:18:01 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	check(int x, int y, int i, int j)
+void	print_rush(int x, int y, int i, int j)
 {
 	if ((i == 0 && j == 0)
 			|| (i == (x - 1) && j == (y - 1) && x > 1 && y > 1))
@@ -36,16 +36,19 @@ void	rush(int x, int y)
 	int i;
 	int j;
 
-	j = 0;
-	while (j < y)
+	if (x > 0 && y > 0)
 	{
-		i = 0;
-		while (i < x)
+		j = 0;
+		while (j < y)
 		{
-			check(x, y, i, j);
-			i++;
+			i = 0;
+			while (i < x)
+			{
+				print_rush(x, y, i, j);
+				i++;
+			}
+			ft_putchar('\n');
+			j++;
 		}
-		ft_putchar('\n');
-		j++;
 	}
 }
