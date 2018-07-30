@@ -6,7 +6,7 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 17:44:31 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/09 17:45:16 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 02:27:06 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,11 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	while (src[i] && i < n)
 	{
 		dest[i] = src[i];
+		i++;
+	}
+	while(i < n)
+	{
+		dest[i] = '\0';
 		i++;
 	}
 	return (dest);

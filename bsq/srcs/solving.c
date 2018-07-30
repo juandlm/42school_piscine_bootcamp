@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   solving.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <jde-la-m@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/25 21:28:20 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/25 23:01:01 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 02:27:02 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,13 +15,11 @@
 
 void	bsq_solver(int fd)
 {
-	//int		index;
 	int		**tab;
 	t_grid	grid;
 	t_coord	coord;
 	t_map	map;
 
-	//index = 1;
 	tab = 0;
 	grid = bsq_read_grid(fd, BUFF_SIZE);
 	map = bsq_info(grid);

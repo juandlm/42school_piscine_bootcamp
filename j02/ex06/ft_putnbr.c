@@ -6,7 +6,7 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 17:44:17 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 16:23:44 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 02:27:27 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,25 +15,16 @@ void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
-	if (nb == -2147483648)
+	unsigned int	nbr;
+
+	if (nb < 0)
 	{
 		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = nb * -1;
-		ft_putnbr(nb);
-	}
-	else if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		nbr = nb * -1;
 	}
 	else
-	{
-		ft_putchar(nb + 48);
-	}
+		nbr = nb;
+	if (nbr >= 10)
+		ft_putnbr(nbr / 10);
+	ft_putchar(nbr % 10 + 48);
 }
