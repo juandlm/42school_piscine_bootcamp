@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   bsq.h                                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <jde-la-m@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/25 19:33:07 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/25 23:28:49 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 02:32:33 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -50,15 +50,15 @@ int					ft_m_atoi(char *str);
 int					ft_min(int a, int b, int c);
 int					ft_max(int *tab, unsigned int len);
 int					ft_file_size(char *filename);
+int					bsq_check_map(t_grid grid, t_map map);
+int					**bsq_ctoi(t_grid grid, t_map map);
+void				bsq_fill_tab(int **tab, t_coord pos, t_grid grid);
+void				bsq_fill_tab_once(int **tab, t_grid grid);
+void				bsq_display(int **tab, t_grid grid, t_map map);
 void				bsq_solver(int fd);
 void				bsq_map_error(void);
 t_grid				bsq_read_grid(int fd, int bfs);
 t_map				bsq_info(t_grid grid);
-void				bsq_fill_tab(int **tab, t_coord pos, t_grid grid);
-void				bsq_fill_tab_once(int **tab, t_grid grid);
-void				bsq_display(int **tab, t_grid grid, t_map map);
 t_coord				bsq_algorithm(int **tab, t_grid grid);
-int					bsq_check_map(t_grid grid, t_map map);
-int					**bsq_ctoi(t_grid grid, t_map map);
 
 #endif

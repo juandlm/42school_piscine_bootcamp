@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   checking.c                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <jde-la-m@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/23 15:53:43 by arazanaj     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/25 22:51:39 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 02:31:40 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -28,9 +28,7 @@ int		bsq_check_map(t_grid grid, t_map map)
 	{
 		if (*strtmp != '\n' &&
 			(*strtmp != map.empty && *strtmp != map.obstacle))
-		{
 			return (-1);
-		}
 		strtmp++;
 	}
 	if (row != height || row == 0 || column == 0
