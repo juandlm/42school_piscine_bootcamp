@@ -11,7 +11,6 @@
 /*                                                        /                   */
 /* ************************************************************************** */
 
-
 #include <unistd.h>
 #include <stdio.h> //
 
@@ -48,10 +47,8 @@ void	combn_util(int arr[10], int n, int index, int data[n], int i)
 			ft_putnbr(data[j]);
 			j++;
 		}
-		//printf("HERE: %d and %d\n", arr[i], i);
-		// if (data[j] < 9)
 		ft_putchar(',');
-		ft_putchar(' ');
+		ft_putchar(' '); //fix this so it doesn't print at the end of the output
         return ;
     }
     if (i > 9)
@@ -67,7 +64,7 @@ void	ft_print_combn(int n)
     int data[n];
 	int i;
 	int index;
-	
+
 	i = 0;
 	index = 0;
     combn_util(arr, n, index, data, i);
@@ -75,6 +72,6 @@ void	ft_print_combn(int n)
 
 int		main(void)
 {
-    ft_print_combn(3);
+    ft_print_combn(4);
     return (0);
 }
