@@ -41,11 +41,28 @@
 - ex09
 
 #day11
+- ex12
+- ex13
+- ex14
+- ex15
+- ex16
+- ex17
 
 #day12
+- ex01
+- ex02
+- ex03
+- ex04
 
 #day13
+- ex05
+- ex06
+- ex07
+- ex08
+- ex09
 
 #rush01
+- sudoku error handling
 
 #rush02
+- rush00 output comparison
