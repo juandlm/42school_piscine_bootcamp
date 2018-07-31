@@ -6,15 +6,17 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/07 16:28:18 by arazanaj     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/30 13:19:10 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/31 15:15:50 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int		rush(int x, int y);
+int		ft_atoi(char *str);
 
-int		main(void)
+int		main(int argc, char **argv)
 {
-	rush(5, 5);
+	if (argc == 3)
+		rush(ft_atoi(argv[1]), ft_atoi(argv[2]));
 	return (0);
 }
