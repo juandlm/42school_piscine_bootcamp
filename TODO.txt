@@ -1,0 +1,51 @@
+#day01
+- ex09
+
+#day02
+- ex08
+
+#day03
+- ex07
+- ex08
+- ex09
+
+#day04
+- ex07
+- ex08
+- ex09
+
+#day05
+- ex20
+- ex21
+- ex22
+- ex23
+
+#day07
+- ex02
+- ex03
+- ex04
+- ex05
+- ex06
+- ex07
+
+#day08
+- ex05
+- ex06
+
+#day09
+- everything
+
+#day10
+- ex07
+- ex08
+- ex09
+
+#day11
+
+#day12
+
+#day13
+
+#rush01
+
+#rush02
