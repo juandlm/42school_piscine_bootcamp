@@ -6,29 +6,29 @@
 #    By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 13:24:09 by jde-la-m     #+#   ##    ##    #+#        #
-#    Updated: 2018/07/16 13:24:10 by jde-la-m    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/07/31 14:48:03 by jde-la-m    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
-NAME = do-op
-
-SRC = ./errors.c ./functions.c ./main.c ./ops.c ./atoi.c
-
-OUTPUT = ./errors.o ./functions.o ./main.o ./ops.o ./atoi.o
-
-DIRH = ./includes
+NAME 	=		do-op
+SRCS 	=		./srcs/main.c	\
+				./srcs/ops.c	\
+				./srcs/tools.c
+OBJS 	=		$(SRCS:.c=.o)
+HEADER	=		./includes/do_op.h
+CFLAGS 	+= 		-Wall -Wextra -Werror
+RM 		=		/bin/rm -f
 
 all: $(NAME)
 
-$(NAME):
-	gcc -Wall -Werror -Wextra -c -I$(DIRH) $(SRC) 
-	gcc $(OUTPUT) -o $(NAME)
+$(NAME): $(OBJS) $(HEADER)
+	gcc $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	rm -f $(OUTPUT)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all

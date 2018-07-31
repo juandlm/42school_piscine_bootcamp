@@ -6,28 +6,25 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 03:44:42 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 03:45:34 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 16:14:59 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_putnbr(int nb)
+void	ft_putnbr(int nbr)
 {
-	unsigned int n;
+	unsigned int nb;
 
-	n = nb;
-	if (nb < 0)
+	if (nbr < 0)
 	{
 		ft_putchar('-');
-		n = -nb;
-	}
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		nb = -nbr;
 	}
 	else
-		ft_putchar(n + 48);
+		nb = nbr;
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	ft_putchar((nb % 10) + 48);
 }

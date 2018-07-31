@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   functions.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <jde-la-m@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/20 22:30:08 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 21:35:09 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/30 16:39:31 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -34,29 +34,29 @@ void	ft_putnbr(int nb)
 	ft_putchar(n % 10 + 48);
 }
 
-int		ft_atoi(char *str)
+int ft_atoi(char *str)
 {
-	int sign;
-	int res;
+    int sign;
+    int res;
 
-	sign = 1;
-	res = 0;
-	while (*str == '\t' || *str == '\n' || *str == '\r'
-			|| *str == '\v' || *str == '\f' || *str == ' ')
-		str++;
-	if (*str == '-' || *str == '+')
-	{
-		*str == '-' ? sign = -1 : 1;
-		str++;
-	}
-	while (*str)
-	{
-		if (*str < '0' || *str > '9')
-			return (res);
-		res = (res * 10) + (*str - '0');
-		str++;
-	}
-	return (res * sign);
+    sign = 1;
+    res = 0;
+    while (*str == '\t' || *str == '\n' || *str == '\r' 
+        || *str == '\v' || *str == '\f' || *str == ' ')
+        str++;
+    if (*str == '-' || *str == '+')
+    {
+        *str == '-' ? sign = -1 : 1;
+        str++;
+    }
+    while (*str)
+    {
+        if (*str < '0' || *str > '9')
+            return (res * sign);
+        res = (res * 10) + (*str - '0');
+        str++;
+   }
+   return (res * sign);
 }
 
 int		ft_strlen(char *str)

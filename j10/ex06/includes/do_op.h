@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putstr.c                                      .::    .:/ .      .::   */
+/*   do_op.h                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 00:18:28 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 01:10:43 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/17 19:19:09 by jde-la-m     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/31 13:47:32 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	ft_putstr(void);
+#ifndef DO_OP_H
+# define DO_OP_H
 
-int		main(void)
-{
-	char stri[8];
+# include <unistd.h>
 
-	stri[0] = 'b';
-	stri[1] = 'o';
-	stri[2] = 'n';
-	stri[3] = 'j';
-	stri[4] = 'o';
-	stri[5] = 'u';
-	stri[6] = 'r';
-	stri[7] = '\0';
-	ft_putstr(stri);
-	return (0);
-}
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
+void	ft_putnbr(int nbr);
+int		ft_atoi(char *str);
+int 	do_op(int a, int b, char op);
+int		add(int a, int b);
+int		sub(int a, int b);
+int		multiply(int a, int b);
+int		divide(int a, int b);
+int		mod(int a, int b);
+int 	(*operation[5])(int, int);
+
+#endif
