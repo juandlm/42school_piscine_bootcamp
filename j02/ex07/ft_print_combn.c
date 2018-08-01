@@ -47,8 +47,8 @@ void	combn_util(int arr[10], int n, int index, int data[n], int i)
 			ft_putnbr(data[j]);
 			j++;
 		}
-		ft_putchar(',');
-		ft_putchar(' '); //fix this so it doesn't print at the end of the output
+		// ft_putchar(',');
+		// ft_putchar(' '); //fix this so it doesn't print at the end of the output
         return ;
     }
     if (i > 9)
@@ -60,18 +60,28 @@ void	combn_util(int arr[10], int n, int index, int data[n], int i)
 
 void	ft_print_combn(int n)
 {
-	int arr[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int data[n];
 	int i;
 	int index;
+	int arr[10];
+    int data[n];
 
 	i = 0;
 	index = 0;
+	arr[0] = 0;
+	arr[1] = 1;
+	arr[2] = 2;
+	arr[3] = 3;
+	arr[4] = 4;
+	arr[5] = 5;
+	arr[6] = 6;
+	arr[7] = 7;
+	arr[8] = 8;
+	arr[9] = 9;
     combn_util(arr, n, index, data, i);
 }
 
 int		main(void)
 {
-    ft_print_combn(4);
+    ft_print_combn(1);
     return (0);
 }
