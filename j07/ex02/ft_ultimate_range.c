@@ -6,28 +6,30 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/12 22:40:42 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/12 23:32:18 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/03 00:21:06 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
+
 int	ft_ultimate_range(int **range, int min, int max)
 {
-	int *arr;
-	int i;
+	int	*tab;
+	int	i;
 
-	i = 0;
 	if (min >= max)
-		arr = NULL;
-	arr = (int*)malloc(sizeof(int) * (max - min));
+		return (0);
+	tab = (int*)malloc(sizeof(int) * (max - min));
+	if (tab == NULL)
+		return (0);
+	i = 0;
 	while (min <= max - 1)
 	{
-		arr[i] = min;
-		min++;
+		tab[i] = min++;
 		i++;
 	}
-	*range = arr;
+	*range = tab;
 	return (i);
 }
