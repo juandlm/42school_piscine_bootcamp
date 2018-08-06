@@ -3,16 +3,15 @@
 /*                                                              /             */
 /*   tools.c                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: rachel <rachel@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/07 16:25:58 by arazanaj     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/31 15:17:00 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/06 14:09:33 by rachel      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putstr.c                                      .::    .:/ .      .::   */
+/*   tools.c                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: alepercq <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: rachel <rachel@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 11:06:03 by alepercq     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/15 19:22:30 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/06 14:20:21 by rachel      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "sudoku.h"
 
 void	ft_putchar(char c)
 {
@@ -20,12 +20,9 @@ void	ft_putchar(char c)
 
 void	ft_putstr(char *str)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*str)
 	{
-		ft_putchar(str[i]);
-		i = i + 1;
+		ft_putchar(*str);
+		str++;
 	}
 }

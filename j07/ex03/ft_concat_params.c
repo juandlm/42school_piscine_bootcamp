@@ -33,7 +33,6 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-
 char *ft_concat_params(int argc, char **argv)
 {
 	int i;

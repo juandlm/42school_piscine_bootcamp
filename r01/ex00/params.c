@@ -3,16 +3,15 @@
 /*                                                              /             */
 /*   params.c                                         .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: rachel <rachel@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/15 19:52:56 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/15 19:57:42 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/06 14:21:32 by rachel      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "sudoku.h"
-#include <stdio.h>
 
 int		nbs_helper(int argc, char **argv)
 {
@@ -59,7 +58,7 @@ int		params_helper(int argc, char **argv)
 			j++;
 		}
 		if (j != 9)
-			return (FALSE);
+			chk = FALSE;
 		i++;
 	}
 	return (chk);
