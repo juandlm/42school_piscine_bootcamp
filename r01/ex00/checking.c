@@ -6,13 +6,12 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/15 19:52:56 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/08 16:31:55 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/08 16:39:30 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "sudoku.h"
-#include <stdio.h>
 
 int		*grid_helper(char **argv, int grid[9][9])
 {
