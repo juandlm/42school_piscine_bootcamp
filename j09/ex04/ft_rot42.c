@@ -6,27 +6,23 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/12 23:38:55 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/13 16:51:18 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/08 21:45:37 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 char	*ft_rot42(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'j')
-			str[i] = str[i] + 16;
-		else if (str[i] >= 'k' && str[i] <= 'z')
-			str[i] = str[i] - 10;
-		if (str[i] >= 'A' && str[i] <= 'J')
-			str[i] = str[i] + 16;
-		else if (str[i] >= 'K' && str[i] <= 'Z')
-			str[i] = str[i] - 10;
-		i++;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = ((str[i] - 97 + 42) % 26) + 97;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = ((str[i] - 65 + 42) % 26) + 65;
+		++i;
 	}
 	return (str);
 }

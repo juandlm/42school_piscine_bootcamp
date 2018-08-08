@@ -6,7 +6,7 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/15 19:52:56 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/08 16:41:17 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/08 21:36:20 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -35,38 +35,39 @@ int		*grid_helper(char **argv, int grid[9][9])
 	return (grid[9]);
 }
 
-int		nbs_helper(int argc, char **argv)
+int		nb_helper(int argc, char **argv)
 {
 	int		i;
 	int		j;
-	int		nbs;
+	int		count;
 
 	i = 1;
-	nbs = 0;
+	count = 0;
 	while (i < argc)
 	{
 		j = 0;
 		while (argv[i][j])
 		{
 			if ((argv[i][j] >= '1') && (argv[i][j] <= '9'))
-				nbs++;
+				count++;
 			j++;
 		}
 		i++;
 	}
-	if (nbs < 17)
+	if (count < 17)
 		return (FALSE);
 	else
 		return (TRUE);
 }
 
-int		params_helper(int argc, char **argv)
+int		param_helper(int argc, char **argv)
 {
 	int		i;
 	int		j;
 	int		check;
 
 	i = 1;
+	check = FALSE;
 	while (i < argc)
 	{
 		j = 0;
@@ -88,5 +89,5 @@ int		params_helper(int argc, char **argv)
 
 int		check_params(int argc, char **argv)
 {
-	return (nbs_helper(argc, argv) && params_helper(argc, argv));
+	return (nb_helper(argc, argv) && param_helper(argc, argv));
 }
