@@ -1,17 +1,40 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   params.c                                         .::    .:/ .      .::   */
+/*   checking.c                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rachel <rachel@student.le-101.fr>          +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/15 19:52:56 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/06 14:21:32 by rachel      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/08 16:31:55 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "sudoku.h"
+#include <stdio.h>
+
+int		*grid_helper(char **argv, int grid[9][9])
+{
+	int		row;
+	int		col;
+
+	row = 0;
+	while (row < 9)
+	{
+		col = 0;
+		while (col < 9)
+		{
+			if ((argv[row + 1][col] >= '1') && (argv[row + 1][col] <= '9'))
+				grid[row][col] = argv[row + 1][col] - '0';
+			else
+				grid[row][col] = 0;
+			col++;
+		}
+		row++;
+	}
+	return (grid[9]);
+}
 
 int		nbs_helper(int argc, char **argv)
 {
@@ -42,7 +65,7 @@ int		params_helper(int argc, char **argv)
 {
 	int		i;
 	int		j;
-	int		chk;
+	int		check;
 
 	i = 1;
 	while (i < argc)
@@ -52,16 +75,16 @@ int		params_helper(int argc, char **argv)
 		{
 			if (((argv[i][j] >= '1') && (argv[i][j] <= '9'))
 				|| (argv[i][j] == '.'))
-				chk = TRUE;
+				check = TRUE;
 			else
-				chk = FALSE;
+				return (FALSE);
 			j++;
 		}
 		if (j != 9)
-			chk = FALSE;
+			return (FALSE);
 		i++;
 	}
-	return (chk);
+	return (check);
 }
 
 int		check_params(int argc, char **argv)

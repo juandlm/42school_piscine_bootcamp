@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   sudoku.h                                         .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: alepercq <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/14 14:41:45 by alepercq     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/15 19:22:22 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/08 16:31:53 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -26,8 +26,11 @@ int		check_col(int grid[9][9], int col, int nb);
 int		check_box(int grid[9][9], int currentrow, int currentcol, int nb);
 int		check_nb(int grid[9][9], int row, int col, int nb);
 int		check_unsolved(int grid[9][9], int *row, int *col);
-int		check_params(int argc, char **argv);
+int		*grid_helper(char **argv, int grid[9][9]);
 int		nbs_helper(int argc, char **argv);
 int		params_helper(int argc, char **argv);
+int		check_params(int argc, char **argv);
+int		sudoku(int grid[9][9]);
+void	display_grid(int grid[9][9]);
 
 #endif
