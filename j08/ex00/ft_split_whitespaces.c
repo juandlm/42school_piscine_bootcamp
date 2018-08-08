@@ -6,24 +6,23 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/13 15:01:37 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/13 23:41:26 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/08 18:29:09 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char			*ft_strdup_from_n(char const *src, int n, unsigned int len)
+char	*ft_strdupn(char *src, int n, unsigned int len)
 {
-	char	*str;
+	char			*str;
 	unsigned int	i;
 
-	i = 0;
 	if (len == 0)
 		return (0);
-	str = (char *)malloc(sizeof(*str) * (len + 1));
-	if (str == (NULL))
+	if(!(str = malloc(sizeof(*src) * (len + 1))))
 		return (NULL);
+	i = 0;
 	while (i < len)
 	{
 		str[i] = src[n + i];
@@ -32,7 +31,8 @@ char			*ft_strdup_from_n(char const *src, int n, unsigned int len)
 	str[i] = '\0';
 	return (str);
 }
-static int		ft_wordcount(char const *s)
+
+int		ft_wordcount(char *s)
 {
 	int i;
 	int j;
@@ -41,10 +41,10 @@ static int		ft_wordcount(char const *s)
 	j = 0;
 	while (s[i])
 	{
-		if (!(s[i] == 32 || s[i] == '\t' || s[i] == '\n'))
+		if (!(s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
 		{
 			j++;
-			while (s[i] && !(s[i] == 32 || s[i] == '\t' || s[i] == '\n'))
+			while (s[i] && !(s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
 				i++;
 		}
 		else
@@ -53,7 +53,7 @@ static int		ft_wordcount(char const *s)
 	return (j);
 }
 
-static char		**ft_fill(char **tab, char const *s)
+char	**ft_fill(char **tab, char *str)
 {
 	int i;
 	int j;
@@ -62,17 +62,17 @@ static char		**ft_fill(char **tab, char const *s)
 	i = 0;
 	j = 0;
 	len = 0;
-	while (s[i])
+	while (str[i])
 	{
-		if (!(s[i] == 32 || s[i] == '\t' || s[i] == '\n'))
+		if (!(str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
 		{
 			len = 0;
-			while (s[i] && !(s[i] == 32 || s[i] == '\t' || s[i] == '\n'))
+			while (str[i] && !(str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
 			{
 				i++;
 				len++;
 			}
-			tab[j++] = ft_strdup_from_n(s, (i - len), len);
+			tab[j++] = ft_strdupn(str, (i - len), len);
 		}
 		else
 			i++;
@@ -81,14 +81,11 @@ static char		**ft_fill(char **tab, char const *s)
 	return (tab);
 }
 
-char			**ft_split_whitespaces(char const *str)
+char	**ft_split_whitespaces(char *str)
 {
 	char **tab;
 
-	if (str == NULL)
-		return (NULL);
-	tab = malloc(sizeof(char *) * ft_wordcount(str) + 1);
-	if (tab == NULL)
+	if(!str || !(tab = malloc(sizeof(char *) * ft_wordcount(str) + 1)))
 		return (NULL);
 	tab = ft_fill(tab, str);
 	return (tab);
