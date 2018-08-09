@@ -6,19 +6,17 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 01:25:33 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 16:09:19 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/09 20:51:11 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int a;
+	int len;
 
-	a = 0;
-	while (str[a])
-	{
-		a++;
-	}
-	return (a);
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }

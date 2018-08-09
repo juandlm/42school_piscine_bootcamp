@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   functions.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <jde-la-m@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/19 13:43:57 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/19 19:31:23 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/09 20:53:16 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -29,10 +29,10 @@ void	ft_putstr(char *str)
 
 int		ft_strlen(char *str)
 {
-	int	i;
+	int len;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }

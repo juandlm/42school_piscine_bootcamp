@@ -6,7 +6,7 @@
 /*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/08 20:41:41 by jde-la-m     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/30 16:14:26 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/09 20:51:20 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,7 +25,7 @@ int		ft_strlen(char *str)
 	int len;
 
 	len = 0;
-	while (*str)
+	while (str[len])
 		len++;
 	return (len);
 }

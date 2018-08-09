@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   reading.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: jde-la-m <jde-la-m@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: jde-la-m <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/23 15:53:43 by arazanaj     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/25 23:29:31 by jde-la-m    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/09 22:40:29 by jde-la-m    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -57,26 +57,27 @@ int		**bsq_ctoi(t_grid grid, t_map map)
 {
 	int		i;
 	int		j;
-	int		**tabres;
-	char	*strtmp;
+	int		**tab;
+	char	*tmp;
 
 	i = 0;
-	strtmp = grid.begin;
-	if (!(tabres = malloc(sizeof(tabres) * grid.row + 1)))
+	tmp = grid.begin;
+	if (!(tab = malloc(sizeof(tab) * grid.row + 1)))
 		return (0);
-	while (*strtmp)
+	while (*tmp)
 	{
 		j = 0;
-		tabres[i] = malloc(sizeof(*tabres) * grid.col + 1);
-		while (*strtmp && *strtmp != '\n')
+		if (!(tab[i] = malloc(sizeof(*tab) * grid.col + 1)))
+			return (0);
+		while (*tmp && *tmp != '\n')
 		{
-			(*strtmp == map.empty) ? tabres[i][j] = 1 : tabres[i][j];
-			(*strtmp == map.obstacle) ? tabres[i][j] = 0 : tabres[i][j];
-			strtmp++;
+			(*tmp == map.empty) ? tab[i][j] = 1 : tab[i][j];
+			(*tmp == map.obstacle) ? tab[i][j] = 0 : tab[i][j];
+			tmp++;
 			j++;
 		}
-		strtmp++;
+		tmp++;
 		i++;
 	}
-	return (tabres);
+	return (tab);
 }
