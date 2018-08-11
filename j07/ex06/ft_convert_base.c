@@ -84,8 +84,6 @@ char	*first_conversion(char *str, int base1, int base2)
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
 			digit = str[i] - '0' - 7;
-		else if (str[i] >= 'a' && str[i] <= 'z')
-			digit = str[i] - '0' - 39;
 		else 
 			digit = str[i] - '0';
 		n = digit * b + n;
