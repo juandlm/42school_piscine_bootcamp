@@ -1,11 +1,13 @@
-# Piscine C 42 - Le 101 - Juillet 2018
-Piscine C de 42 réalisée à l'école 101 à Lyon en juillet 2018.
+# Piscine - C language Admission Bootcamp
+The piscine ("pool" in French) is the only part of the admissions process. It's a 28-day experience in which only motivation and willpower will keep you afloat.
 
-- 240 heures de logtime
-- Classé 8ème sur 200 piscineux
+* **4 weeks of coding**
+* **Monday through Sunday, day and night**
 
-Le premier commit a été realisé tel quel, il y a encore des erreurs et des exos manquent, ils seront ajoutés, complétés et/ou corrigés au fur et à mesure post-piscine. *28.07.2018*
+# Results
+* 240 total logtime hours
+* Ranked 8th out of 200 participants
 
-Notes obtenues:
+Grades:
 
 ![Grades](https://i.imgur.com/YHRKnU3.png)
